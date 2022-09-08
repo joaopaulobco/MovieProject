@@ -1,19 +1,33 @@
 import './App.css';
-import menuImg from './justify.svg'
-import profileImg from './person-circle.svg'
+import { Route, Routes } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
     <div className="App">
-      <nav>
-        <div className='menu-sidebar'><img src={menuImg} alt='menu-sidebar' /></div>
-        <div className='title'><h1>MovieFlix</h1></div>
-        <div className='profile-img'><img src={profileImg} alt='profile'/></div>
-        <div className='login'><h2>Login</h2></div>
-      </nav>
-        <h4>Últimos lançamentos</h4>
-        <hr></hr>
-        <p>lista de filmes - GET API</p>
+      <div className="app-navbar">
+        <Navbar />
+      </div>
+
+      <div className="app-mid">
+        <div className="app-sidebar">
+          <div><Sidebar /></div>
+        </div>
+
+        <div className="app-container">
+          <Routes>
+            <Route path="/" element={<div>Home</div>} />
+
+          </Routes>
+        </div>
+      </div>
+      <div className="app-footer">
+        <div><Footer /></div>
+      </div>
     </div>
   );
 }
