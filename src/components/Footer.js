@@ -1,8 +1,12 @@
 import "./Footer.css";
+import gitImg from '../images/github.svg'
 
 const Footer = () => {
     return(
-        <div><p>Footer</p></div>
+        <footer>
+        <img src={gitImg} alt='gitImg' />
+        <span>link do repositorio</span>
+        </footer>
     )
 }
 

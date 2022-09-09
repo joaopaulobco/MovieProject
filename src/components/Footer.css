@@ -1,0 +1,13 @@
+footer {
+    color: black;
+    text-align: center;
+    background-color: #fff66f;
+    font-size: 1.25rem;
+    padding: 5px;
+}
+
+footer img {
+    height: 25px;
+    margin-right: 5px;
+}
+
