@@ -1,47 +1,14 @@
-.App nav {
-  background-color: #fff66f;
-  height: 80px;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.App {
+    color: white;
 }
 
-.menu-sidebar > img {
-  margin-left: 30px;
-  height: 40px;
-  align-items: center;
+.app-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-.title > h1 {
-  margin-left: 20px;
-}
 
-.profile-img > img {
-  height: 35px;
-  margin-left: 1320px;
-}
-
-.login > h2 {
-  margin-right: 20px;
-  margin-left: 15px;
-}
-
-.minions-movie {
-  display: flex;
-  align-items: center;
-}
-
-.App h4, p {
-  color: white;
-  text-align: left;
-  margin-left: 30px;
-}
-
-.App footer {
-  color: white;
-}
 
 
 
