@@ -1,15 +1,21 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { useState } from 'react';
 import menuImg from "../images/justify.svg";
 import profileImg from "../images/person-circle.svg";
+import Sidebar from "./Sidebar";
+
 
 const Navbar = () => {
+  const [menu, setMenu] = useState(false); 
+
   return (
     <nav>
       <div className="menu-sidebar">
-        <Link to={"./menu"}>
+        <button onClick={() => setMenu(!menu)}>
           <img src={menuImg} alt="menu-sidebar" />
-        </Link>
+        </button>
+        {menu && <Sidebar />}
       </div>
       <div className="title">
         <h1>MovieFlix</h1>
