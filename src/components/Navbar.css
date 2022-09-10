@@ -9,6 +9,10 @@ nav {
     position: fixed;
 }
 
+.menu-sidebar {
+    position: relative;
+}
+
 .menu-sidebar button {
     background-color: #fff66f;
     border: 0;

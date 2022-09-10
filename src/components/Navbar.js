@@ -7,13 +7,15 @@ import Sidebar from "./Sidebar";
 
 
 const Navbar = () => {
+  const [menu, setMenu] = useState(false); 
 
   return (
     <nav>
       <div className="menu-sidebar">
-        <button onClick={<Sidebar />}>
+        <button onClick={() => setMenu(!menu)}>
           <img src={menuImg} alt="menu-sidebar" />
         </button>
+        {menu && <Sidebar />}
       </div>
       <div className="title">
         <h1>MovieFlix</h1>

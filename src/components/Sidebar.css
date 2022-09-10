@@ -1,7 +1,7 @@
 .sidebar {
-    position: absolute;   
-    margin-left: 0;
-    margin-top: 80px;
+    position: absolute; 
+    top: 60px;  
+    width: 200px;
     padding-left: 30px;
     padding-right: 30px;
     background-image: linear-gradient(to right, #FFFF99, #FFF66F ) 
