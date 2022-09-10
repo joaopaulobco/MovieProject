@@ -5,7 +5,10 @@ import { useState } from 'react';
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-
+import Home from './pages/Home';
+import UserProfile from './pages/UserProfile'
+import Trailers from './pages/Trailers';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
   return (
@@ -21,7 +24,10 @@ function App() {
 
         <div className="app-container">
           <Routes>
-            <Route path="/" element={<div>Home</div>} />
+            <Route path="/" element={<Home />} />
+            <Route path="/userprofile" element={<UserProfile />} />
+            <Route path="/trailers" element={<Trailers />} />
+            <Route path="*" element={<ErrorPage />} />
 
           </Routes>
         </div>
