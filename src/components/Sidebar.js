@@ -5,9 +5,9 @@ const Sidebar = () => {
     return(
         <div className="sidebar">
             <ul>
-                <Link to='../pages/Home.js'><li>Home</li></Link>
-                <Link to='../pages/UserProfile.js'><li>My Profile</li></Link>
-                <Link to='../pages/Trailers.js'><li>Trailers</li></Link>
+                <Link to='/'><li>Home</li></Link>
+                <Link to='/userprofile'><li>My Profile</li></Link>
+                <Link to='/trailers'><li>Trailers</li></Link>
             </ul>
         </div>
     )
