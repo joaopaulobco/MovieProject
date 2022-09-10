@@ -1,5 +1,6 @@
 import './App.css';
 import { Route, Routes } from "react-router-dom";
+import { useState } from 'react'; 
 
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
@@ -15,7 +16,7 @@ function App() {
 
       <div className="app-mid">
         <div className="app-sidebar">
-          <div><Sidebar /></div>
+          {/* <div><Sidebar /></div> */}
         </div>
 
         <div className="app-container">
