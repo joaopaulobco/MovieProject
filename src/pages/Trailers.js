@@ -1,5 +1,10 @@
+import './Trailer.css'
 const Trailers = () => {
-    <div>Trailer</div>
+
+   
+    return(
+    <div className="trailer">Trailer</div>
+    )
 }
 
 export default Trailers;
