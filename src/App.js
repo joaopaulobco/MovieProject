@@ -2,8 +2,8 @@ import './App.css';
 import { Route, Routes } from "react-router-dom";
 import { useState } from 'react'; 
 
+import Login from './components/Login';
 import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import Home from './pages/Home';
 import UserProfile from './pages/UserProfile'
