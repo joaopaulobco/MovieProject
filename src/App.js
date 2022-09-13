@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <div className="app-navbar">
-        <Navbar />
+        <Navbar/>
       </div>
 
       <div className="app-mid">
