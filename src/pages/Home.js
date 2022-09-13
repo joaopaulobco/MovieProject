@@ -1,12 +1,34 @@
 import './Home.css'
-import Login from '../components/Login';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
+    const [ movies, setMovies ] = useState([]);
+    
+    useEffect(() => {
+        axios
+            .get('https://api.themoviedb.org/3/movie/now_playing?api_key=e9658f468ef45fbe4c5ab164e45527bf&language=en-US')
+            .then((response) => {
+                setMovies(response.data.results)
+            })
+    }, []);
+    
+    let moviesData = movies.map((movie) => {
+        return (
+            <div key={movie.id} className="nowplaying-movies">
+                <img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`} alt='poster'/>
+                <h4>{movie.original_title}</h4>
+                <p>Release Date: {movie.release_date}</p>
+                {/* <p>{movie.overview}</p> */}
+            </div>
+        )
+    }); 
+
     return (
-        <div className="home">
-            <h4>Últimos lançamentos</h4>
-            <hr></hr>
-            <p>lista de filmes - GET API</p>
+        <div className='home'>
+            {/* <h3>Movies - NOW PLAYING</h3> */}
+            {moviesData}
         </div>
     )
 }
