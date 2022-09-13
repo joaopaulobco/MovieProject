@@ -2,13 +2,13 @@ import './App.css';
 import { Route, Routes } from "react-router-dom";
 import { useState } from 'react'; 
 
-import Login from './components/Login';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from './pages/Home';
 import UserProfile from './pages/UserProfile'
 import Trailers from './pages/Trailers';
 import ErrorPage from './pages/ErrorPage';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
         <div className="app-container">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/userprofile" element={<UserProfile />} />
             <Route path="/trailers" element={<Trailers />} />
             <Route path="*" element={<ErrorPage />} />
