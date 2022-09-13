@@ -4,7 +4,7 @@ import { useState } from 'react';
 import menuImg from "../images/justify.svg";
 import profileImg from "../images/person-circle.svg";
 import Sidebar from "./Sidebar";
-import Login from "./Login";
+import Login from "../pages/Login";
 
 
 const Navbar = () => {
@@ -23,10 +23,12 @@ const Navbar = () => {
         <h1>Movies&Series</h1>
       </div>
       <div className="profile">
-      <button onClick={() => setLogin(!login)}>
+      {/* <button onClick={() => setLogin(!login)}> */}
+      <Link to='/login'>
         <img src={profileImg} alt="profile" />
         <span>Login</span>
-      </button>
+      </Link>
+      {/* </button> */}
       {login && <Login />}
       </div>
     </nav>

@@ -4,6 +4,7 @@ const Login = () => {
    
   return (
     <div className='login'>
+        <h2>Sign in to Movies&Series</h2>
         <form className='formulario'>
             <label>Username:</label>
             <input type="text" placeholder='@username'></input>
