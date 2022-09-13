@@ -20,7 +20,7 @@ const Navbar = () => {
         {menu && <Sidebar />}
       </div>
       <div className="title">
-        <h1>MovieFlix</h1>
+        <h1>Movies&Series</h1>
       </div>
       <div className="profile">
       <button onClick={() => setLogin(!login)}>

@@ -1,5 +1,17 @@
 .home {
-padding: 90px;
-left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 80px;
+    justify-content: space-around;
+}
+
+.nowplaying-movies {
+    width: 300px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
 }
 
