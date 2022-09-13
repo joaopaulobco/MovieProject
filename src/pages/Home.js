@@ -13,12 +13,14 @@ const Home = () => {
                 setMovies(response.data.results)
             })
     }, []);
+
+    console.log(movies)
     
     let moviesData = movies.map((movie) => {
         return (
             <div key={movie.id} className="nowplaying-movies">
                 <img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`} alt='poster'/>
-                <h4>{movie.original_title}</h4>
+                <h4>{movie.title}</h4>
                 <p>Release Date: {movie.release_date}</p>
                 {/* <p>{movie.overview}</p> */}
             </div>
@@ -27,7 +29,7 @@ const Home = () => {
 
     return (
         <div className='home'>
-            {/* <h3>Movies - NOW PLAYING</h3> */}
+            <h3>Movies - NOW PLAYING</h3>
             {moviesData}
         </div>
     )
