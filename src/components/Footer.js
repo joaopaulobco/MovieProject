@@ -4,8 +4,9 @@ import gitImg from '../images/github.svg'
 const Footer = () => {
     return(
         <footer>
-        <img src={gitImg} alt='gitImg' />
-        <span>link do repositorio</span>
+            <a href="https://github.com/joaopaulobco/MovieProject" target="_blank" rel="noopener noreferrer">
+                <img src={gitImg} alt='gitImg' />
+            </a>
         </footer>
     )
 }
