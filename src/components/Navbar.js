@@ -20,15 +20,15 @@ const Navbar = () => {
         {menu && <Sidebar />}
       </div>
       <div className="title">
+      <Link to='/'>
         <h1>Movies&Series</h1>
+      </Link>
       </div>
       <div className="profile">
-      {/* <button onClick={() => setLogin(!login)}> */}
       <Link to='/login'>
         <img src={profileImg} alt="profile" />
         <span>Login</span>
       </Link>
-      {/* </button> */}
       {login && <Login />}
       </div>
     </nav>

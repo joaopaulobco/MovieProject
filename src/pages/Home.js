@@ -29,7 +29,7 @@ const Home = () => {
 
     return (
         <div className='home'>
-            <h3>Movies - NOW PLAYING</h3>
+            {/* <h3>Movies - NOW PLAYING</h3> */}
             {moviesData}
         </div>
     )
