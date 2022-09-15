@@ -28,9 +28,11 @@ const Home = () => {
     }); 
 
     return (
-        <div className='home'>
-            {/* <h3>Movies - NOW PLAYING</h3> */}
+        <div className='title-nowplaying'>
+            <h3>Movies - NOW PLAYING</h3>
+            <div className='home'>
             {moviesData}
+            </div>
         </div>
     )
 }
