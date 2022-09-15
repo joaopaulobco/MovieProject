@@ -10,7 +10,7 @@ const Home = () => {
         axios
             .get('https://api.themoviedb.org/3/movie/now_playing?api_key=e9658f468ef45fbe4c5ab164e45527bf&language=en-US')
             .then((response) => {
-                setMovies(response.data.results)
+                setMovies(response.data.results) 
             })
     }, []);
 
@@ -19,8 +19,8 @@ const Home = () => {
     let moviesData = movies.map((movie) => {
         return (
             <div key={movie.id} className="nowplaying-movies">
-                <img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`} alt='poster'/>
-                <h4>{movie.title}</h4>
+                <a href="http://localhost:3000/trailers"><img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`} alt='poster'/></a>
+                <div><h4>{movie.title}</h4></div>
                 <p>Release Date: {movie.release_date}</p>
                 {/* <p>{movie.overview}</p> */}
             </div>
@@ -30,7 +30,7 @@ const Home = () => {
     return (
         <div className='title-nowplaying'>
             <h3>Movies - NOW PLAYING</h3>
-            <div className='home'>
+            <div>
             {moviesData}
             </div>
         </div>
