@@ -15,6 +15,7 @@
 }
 
 .nowplaying-movies {
+    background-color: #111;
     width: 300px;
     margin:0;
     display: flex;
@@ -23,4 +24,10 @@
     position: relative;
     top: 20px;
 }
+
+.nowplaying-movies img {
+    width: 280px;
+}
+
+
 

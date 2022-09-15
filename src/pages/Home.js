@@ -22,7 +22,7 @@ const Home = () => {
             {movies.map((movie) => {
                 return (
                     <div key={movie.id} className="nowplaying-movies">
-                        <img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`} alt='poster'/>
+                         <a href='http://localhost:3000/movie'><img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`} alt='poster'/></a>
                         <h4>{movie.title}</h4>
                         <p>Release Date: {movie.release_date}</p>
                     </div>
