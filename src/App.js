@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from './pages/Home';
 import UserProfile from './pages/UserProfile'
-import Trailers from './pages/Trailers';
+import Trailers from './pages/Movie';
 import ErrorPage from './pages/ErrorPage';
 import Login from './pages/Login';
 
