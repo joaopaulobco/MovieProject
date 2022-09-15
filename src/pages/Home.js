@@ -12,26 +12,22 @@ const Home = () => {
             .then((response) => {
                 setMovies(response.data.results)
             })
+            .catch((error) => console.log(error));
     }, []);
 
-    console.log(movies)
-    
-    let moviesData = movies.map((movie) => {
-        return (
-            <div key={movie.id} className="nowplaying-movies">
-                <a href='http://localhost:3000/movie'><img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`} alt='poster'/></a>
-                <h4>{movie.title}</h4>
-                <p>Release Date: {movie.release_date}</p>
-                {/* <p>{movie.overview}</p> */}
-            </div>
-        )
-    }); 
-
     return (
-        <div className='title-nowplaying'>
-            <h3>Movies - NOW PLAYING</h3>
+        <div className='title-movies'>
+            <h2>Movies - NOW PLAYING:</h2>
             <div className='home'>
-            {moviesData}
+            {movies.map((movie) => {
+                return (
+                    <div key={movie.id} className="nowplaying-movies">
+                         <a href='http://localhost:3000/movie'><img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`} alt='poster'/></a>
+                        <h4>{movie.title}</h4>
+                        <p>Release Date: {movie.release_date}</p>
+                    </div>
+                )
+            })}
             </div>
         </div>
     )
