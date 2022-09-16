@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from './pages/Home';
 import UserProfile from './pages/UserProfile'
-import Trailers from './pages/Movie';
+import Movie from './pages/Movie';
 import ErrorPage from './pages/ErrorPage';
 import Login from './pages/Login';
 
@@ -27,7 +27,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/userprofile" element={<UserProfile />} />
-            <Route path="/trailers" element={<Trailers />} />
+            <Route path="/movie/:id" element={<Movie />}  />
             <Route path="*" element={<ErrorPage />} />
 
           </Routes>
