@@ -1,7 +1,6 @@
 import './Home.css'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import Navbar from '../components/Navbar';
 
 const Home = () => {
     const [ movies, setMovies ] = useState([]);
