@@ -1,9 +1,6 @@
 .movie {
     color: white;
     display: flex;
-    position: relative;
-    top: 120px;
-    left: 20px;
     justify-content: center;
 }
 
@@ -26,6 +23,24 @@
 }
 
 .movie-data h2 {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
+.movie-data span {
+    border: 1px solid white;
+    border-radius: 25px;
+    width: 150px;
+    padding: 5px ;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 5px;
+    
+}
+
+.genre {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+   
+    
+}

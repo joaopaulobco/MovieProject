@@ -25,7 +25,6 @@ const Home = () => {
                     <div className="nowplaying-movies">
                          <img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`} alt='poster'/>
                         <h4>{movie.title}</h4>
-                        <p>Release Date: {movie.release_date}</p>
                     </div>
                         </Link>
                 )
@@ -34,4 +33,4 @@ const Home = () => {
         </div>
     )
 }
-export default Home; 
+export default Home;  
