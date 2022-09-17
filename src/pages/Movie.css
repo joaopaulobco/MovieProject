@@ -1,4 +1,46 @@
 .movie {
     color: white;
-    padding: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.movie-data {
+    margin-left: 30px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    justify-content: center;
+    
+}
+
+.movie-data p {
+    margin-bottom: 20px;
+}
+
+.movie-data img {
+    width: 20px;
+}
+
+.movie-data h2 {
+    margin-bottom: 15px;
+}
+
+.movie-data span {
+    border: 1px solid white;
+    border-radius: 25px;
+    width: 150px;
+    padding: 5px ;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 5px;
+    
+}
+
+.genre {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+   
+    
 }

@@ -3,7 +3,8 @@ footer {
     text-align: center;
     background-color: #fff66f;
     font-size: 1.25rem;
-    padding: 5px;
+    padding: 5px 0;
+    width: 100%;
 }
 
 footer img {
