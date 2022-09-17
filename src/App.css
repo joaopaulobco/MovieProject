@@ -1,15 +1,32 @@
 .App {
     color: white;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .app-footer {
     position: fixed;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    right:0;
 }
 
 
+.app-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
 
+.app-container {
+    margin-top: 130px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 

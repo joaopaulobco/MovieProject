@@ -19,7 +19,6 @@ function App() {
 
       <div className="app-mid">
         <div className="app-sidebar">
-          {/* <div><Sidebar /></div> */}
         </div>
 
         <div className="app-container">
@@ -34,7 +33,7 @@ function App() {
         </div>
       </div>
       <div className="app-footer">
-        <div><Footer /></div>
+        <Footer />
       </div>
     </div>
   );
