@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect } from "react";
+import estrela from '../images/estrela.png'
 
 const Movie = () => {
   const { id } = useParams();
@@ -19,11 +20,23 @@ const Movie = () => {
       })
       .catch((error) => console.log(error));
   }, []);
-  console.log(movie);
-
+  console.log(movie.genres);
   return (
     <div className="movie">
-      <p>{movie.title}</p>
+        <div className="movie-img">
+          <img
+            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+            alt="poster"
+          />
+        </div>
+        <div className="movie-data">
+          <h2>{movie.title}</h2>
+          <p><img src={estrela} alt='estrela'/>{movie.vote_average}</p>
+          <p><b>Release Date:</b> {movie.release_date}</p>
+          <p><b>Sinopse:</b> {movie.overview}</p>
+          <p><b>Runtime:</b> {movie.runtime} minutes.</p>
+        </div>
+        
     </div>
   );
 };
