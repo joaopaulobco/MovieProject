@@ -1,8 +1,6 @@
 import './Home.css'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import Navbar from '../components/Navbar';
-import { Link } from 'react-router-dom'
 
 const Home = () => {
     const [ movies, setMovies ] = useState([]);
