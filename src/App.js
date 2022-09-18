@@ -9,6 +9,7 @@ import UserProfile from './pages/UserProfile'
 import Movie from './pages/Movie';
 import ErrorPage from './pages/ErrorPage';
 import Login from './pages/Login';
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<RegisterPage />} />
             <Route path="/userprofile" element={<UserProfile />} />
             <Route path="/movie/:id" element={<Movie />}  />
             <Route path="*" element={<ErrorPage />} />
