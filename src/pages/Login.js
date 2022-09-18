@@ -8,7 +8,7 @@ const Login = () => {
         <h2>Sign in to Movies&Series</h2>
         <form className='formulario'>
             <label>Username:</label>
-            <input type="text" placeholder='@username'></input>
+            <input type="text" placeholder='@username' autoFocus required></input>
             <button type='submit'>Submit</button>
         </form>
         <div className='register'>
