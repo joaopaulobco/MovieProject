@@ -21,11 +21,12 @@
 }
 
 .app-container {
-    margin-top: 130px;
+    margin-top: 85px;
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
 }
 
 
