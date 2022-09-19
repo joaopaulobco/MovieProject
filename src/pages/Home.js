@@ -12,7 +12,7 @@ const Home = () => {
             .then((response) => {
                 setMovies(response.data.results)
             })
-            .catch((error) => console.log(error));
+            .catch((error) => window.alert('Error! Movies not found!'));
     }, []);
 
     return (

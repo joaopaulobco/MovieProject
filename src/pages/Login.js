@@ -2,7 +2,7 @@ import './Login.css'
 import { Link } from 'react-router-dom'
 
 const Login = () => {
-   
+
   return (
     <div className='login'>
         <h2>Sign in to Movies&Series</h2>
