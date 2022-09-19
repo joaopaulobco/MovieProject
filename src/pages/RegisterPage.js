@@ -22,6 +22,8 @@ const RegisterPage = () => {
             .then(() => {
                 setName('');
                 setUser('');
+
+                navigate('/login')
             })
             .catch((error) => window.alert('Error!'))
     };
