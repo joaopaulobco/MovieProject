@@ -27,7 +27,7 @@ const UserProfile = () => {
     <div className="welcome">
       <div className="userpage">
         <h1 className="hi">Hi <img src={smile} alt="smile-icon" /></h1>
-        <p>Do you wanna have your own favorites movies list?</p>
+        <p>Do you wanna have your own favorite movies list?</p>
         <p>So, it's easy! Choose the movies below and click on the button to add or remove them to your list!</p>
         <input type='text'></input>
         <button>search</button>
