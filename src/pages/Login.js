@@ -23,7 +23,7 @@ const Login = () => {
 
     const findUser = usersAPI.find((user) => user.username === username)
 
-    findUser ? navigate('/profile') : window.alert("User not found");   
+    findUser ? navigate('/userprofile') : window.alert("User not found");   
   };
   
   return (
