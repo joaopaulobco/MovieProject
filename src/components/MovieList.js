@@ -5,7 +5,7 @@ const MovieList = (props) => {
     
     return (
         <div className='title-movies'>
-            <h2>Movies - NOW PLAYING:</h2>
+            {/* <h2>Movies - NOW PLAYING:</h2> */}
             <div className='home'>
             {props.movies.map((movie) => {
                 return (
