@@ -6,7 +6,6 @@ import axios from 'axios';
 const Login = () => {
   const [username, setUsername] = useState("");
   const [usersAPI, setUsersAPI] = useState([]); 
-  const [error, setError] = useState("");
 
   const navigate = useNavigate(); 
 
@@ -18,19 +17,15 @@ const Login = () => {
     })
     .catch((error) => window.alert('Error!'))
   }, []); 
-  console.log(usersAPI)
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    
+
+    const findUser = usersAPI.find((user) => user.username === username)
+
+    findUser ? navigate('/profile') : window.alert("User not found");   
   };
   
-  const findUser = () => {
-    usersAPI.find((user) => user.username ? navigate('/profile') : window.alert("User not found"))
-  };
-
-  console.log(username)
-
   return (
     <div className='login'>
         <h2>Sign in to Movies&Series</h2>
@@ -44,7 +39,7 @@ const Login = () => {
               onChange={(event) => setUsername(event.target.value)}  
               value={username}
               />
-            <button type='submit' onClick={findUser}>Submit</button>
+            <button type='submit'>Submit</button>
         </form>
         <div className='register'>
             <p>Don't you have a username?</p>
