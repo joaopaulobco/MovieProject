@@ -15,6 +15,7 @@ const RegisterPage = () => {
         const body = {
             name: name,
             username: user,
+            movies: []
         }
 
         axios

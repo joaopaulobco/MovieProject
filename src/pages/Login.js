@@ -1,14 +1,44 @@
 import './Login.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import axios from 'axios';
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [usersAPI, setUsersAPI] = useState([]); 
 
+  const navigate = useNavigate(); 
+
+  useEffect(() => {
+    axios
+    .get('https://ironrest.herokuapp.com/movieprojectusers')
+    .then((response) => {
+      setUsersAPI(response.data)
+    })
+    .catch((error) => window.alert('Error!'))
+  }, []); 
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const findUser = usersAPI.find((user) => user.username === username)
+
+    findUser ? navigate('/userprofile') : window.alert("User not found");   
+  };
+  
   return (
     <div className='login'>
         <h2>Sign in to Movies&Series</h2>
-        <form className='formulario'>
+        <form className='formulario' onSubmit={handleSubmit}>
             <label>Username:</label>
-            <input type="text" placeholder='@username' autoFocus required></input>
+            <input 
+              type="text" 
+              placeholder='@username' 
+              autoFocus 
+              required 
+              onChange={(event) => setUsername(event.target.value)}  
+              value={username}
+              />
             <button type='submit'>Submit</button>
         </form>
         <div className='register'>
