@@ -13,6 +13,7 @@ const Login = () => {
     axios
     .get('https://ironrest.herokuapp.com/movieprojectusers')
     .then((response) => {
+      console.log(response.data)
       setUsersAPI(response.data)
     })
     .catch((error) => window.alert('Error!'))
@@ -22,8 +23,9 @@ const Login = () => {
     event.preventDefault();
 
     const findUser = usersAPI.find((user) => user.username === username)
+    console.log("findUser",findUser)
 
-    findUser ? navigate('/userprofile') : window.alert("User not found");   
+    findUser ? navigate(`/userprofile/${findUser._id}`) : window.alert("User not found");   
   };
   
   return (

@@ -17,7 +17,7 @@ const Navbar = () => {
         <button onClick={() => setMenu(!menu)}>
           <img src={menuImg} alt="menu-sidebar" />
         </button>
-        {menu && <Sidebar />}
+        {menu && <Sidebar closeMenu={() => setMenu(false)} />}
       </div>
       <div className="title">
       <Link to='/'>
@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="profile">
       <Link to='/login'>
         <img src={profileImg} alt="profile" />
-        <span>Login</span>
+        <span>Profile</span>
       </Link>
       {login && <Login />}
       </div>
