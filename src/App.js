@@ -10,6 +10,7 @@ import Movie from './pages/Movie';
 import ErrorPage from './pages/ErrorPage';
 import Login from './pages/Login';
 import RegisterPage from './pages/RegisterPage';
+import UserList from './pages/UserList';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/userprofile" element={<UserProfile />} />
+            <Route path="/userprofile/:_id" element={<UserList />} />
             <Route path="/movie/:id" element={<Movie />}  />
             <Route path="*" element={<ErrorPage />} />
 
