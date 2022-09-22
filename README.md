@@ -2,7 +2,7 @@
 
 ## Project #2 - Web Development - IRONHACK 
 
-## Descrição do projeto :memo::pencil::
+## Descrição do projeto :memo::
 
 Página Web desenvolvida com o uso do React. 
 A aplicação Movies&Series é uma espécie de biblioteca de filmes, em que cada usuário terá o seu próprio perfil para criação de lista de filmes favoritos. 
@@ -31,6 +31,7 @@ $ npm start
 <a href="https://github.com/renatainojosa">
     <sub><b>Renata Inojosa</b></sub>
 </a>
+<br />
 <a href="https://github.com/joaopaulobco">
     <sub><b>João Paulo Oliveira</b></sub>
 </a>
