@@ -15,7 +15,7 @@ O usuário estará sempre atualizado dos filmes em cartaz nos cinemas e dos últ
 - [API IronRest](https://github.com/Tzikas/MONGO_REST)
 - CSS 
 
-## Como rodar a aplicação:
+## Como rodar a aplicação :gear::
 
 - Clone este repositório
 - Acesse a pasta do projeto
