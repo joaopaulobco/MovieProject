@@ -1,14 +1,24 @@
 import "./RegisterPage.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const RegisterPage = () => {
     const [name, setName] = useState('');
     const [user, setUser] = useState('');
+    const [users, setUsers] = useState([]);
 
     const navigate = useNavigate(); 
 
+    // useEffect(() => {
+    //   axios
+    //   .get('https://ironrest.herokuapp.com/movieprojectusers')
+    //   .then((response) => {
+    //     setUsers(response.data)
+    //   })
+    //   .catch((error) => window.alert('Error!'))
+    // }, []); 
+    
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -27,10 +37,15 @@ const RegisterPage = () => {
                 navigate('/login')
             })
             .catch((error) => window.alert('Error!'))
+
+        //const notRegister = users.find((user) => user.username === name)
+        // console.log("findUser",findUser)
+
+        // notRegister ? window.alert("User already registered. Try another username.") :  ;
     };
 
   return (
-    <div className="register-area">
+      <div className="register-area">
       <h2>Creat an account</h2>
       <form className="form-register" onSubmit={handleSubmit}>
         <label>Name:</label>

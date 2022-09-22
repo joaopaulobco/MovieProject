@@ -1,8 +1,25 @@
-# Getting Started with Create React App
+<h1 align="center">Movies&Series :clapper:<h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project #2 - Web Development - IRONHACK 
 
-## Available Scripts
+## Descrição do projeto :memo::pencil::
+
+Página Web desenvolvida com o uso do React. 
+A aplicação Movies&Series é uma espécie de biblioteca de filmes, em que cada usuário terá o seu próprio perfil para criação de lista de filmes favoritos. 
+O usuário estará sempre atualizado dos filmes em cartaz nos cinemas e dos últimos lançamentos, além de saber todos os seus detalhes, como gênero, pontuação, sinopse etc.  
+
+## Tecnologias utilizadas :computer::
+
+:small_blue_diamond: React
+:small_blue_diamond: JavaScript
+:small_blue_diamond: CSS 
+:small_blue_diamond: API TMDb (Documentation: https://developers.themoviedb.org/3/getting-started/introduction)
+:small_blue_diamond: API IronRest (Documentation: https://github.com/Tzikas/MONGO_REST)
+
+
+
+
+
 
 In the project directory, you can run:
 
