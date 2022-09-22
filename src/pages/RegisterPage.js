@@ -1,13 +1,23 @@
 import "./RegisterPage.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import usersApi from "../api/usersapi"
 
 const RegisterPage = () => {
     const [name, setName] = useState('');
     const [user, setUser] = useState('');
+    const [usersList, setUsersList] = useState([]);
 
     const navigate = useNavigate(); 
+
+    useEffect(() => {
+      usersApi.getUsersList()
+      .then((response) => {
+        setUsersList(response.data)
+      })
+      .catch((error) => window.alert('Error!'))
+    }, []); 
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -27,6 +37,10 @@ const RegisterPage = () => {
                 navigate('/login')
             })
             .catch((error) => window.alert('Error!'))
+
+        const equalUser = usersList.find((eachuser) => eachuser.username === user)
+        
+        equalUser && window.alert("User already register. Try another username.")
     };
 
   return (

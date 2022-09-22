@@ -1,7 +1,8 @@
+import './UserList.css';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import './UserList.css';
+import usersApi from '../api/usersapi';
 
 const UserList = () => {
     const [userAPI, setUserAPI] = useState({});
@@ -10,13 +11,12 @@ const UserList = () => {
     useEffect(() => {
         axios
         .get(`https://ironrest.herokuapp.com/movieprojectusers/${_id}`)
+        usersApi.getUsersList
         .then((response) => {
           setUserAPI(response.data)
         })
         .catch((error) => window.alert('Error!'))
       }, []); 
-
-      console.log(userAPI)
 
   return (
     <div>
