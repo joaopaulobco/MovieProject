@@ -1,11 +1,14 @@
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import axios from 'axios';
 import './UserList.css';
+import UserListContext from '../Utils/UserListContext';
+
 
 const UserList = () => {
     const [userAPI, setUserAPI] = useState({});
     const { _id } = useParams(); 
+    const {userList} = useContext(UserListContext);
 
     useEffect(() => {
         axios
@@ -14,9 +17,10 @@ const UserList = () => {
           setUserAPI(response.data)
         })
         .catch((error) => window.alert('Error!'))
-      }, []); 
-
-      console.log(userAPI)
+      }, [_id]); 
+      useEffect(() => {
+        console.log(userList)
+      },[userList])
 
   return (
     <div>

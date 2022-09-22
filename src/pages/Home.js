@@ -1,6 +1,6 @@
 import "./Home.css";
 import popcorn from "../images/popcorn.gif";
-import cinema from "../images/cinema.png"
+import cinema from "../images/cinema.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import MovieList from "../components/MovieList";
@@ -21,23 +21,24 @@ const Home = () => {
 
   return (
     <div className="home-main">
-        <div className="home-introduction">
-            <img className="cine" src={cinema} alt="cine" />
+      <div className="home-introduction">
+        <img className="cine" src={cinema} alt="cine" />
         <div className="home-title">
-            <h1>WELCOME TO YOUR MOVIE'S LIBRARY!</h1>
-            <h3>
-            Here you will find the release movies, what are now playing on the cinema and much more!
-            </h3>
-            <h3>
-                Have fun!
-            </h3>
+          <h1>WELCOME TO YOUR MOVIE'S LIBRARY!</h1>
+          <h3>
+            Here you will find the release movies, what are now playing on the
+            cinema and much more!
+          </h3>
+          <h3>Have fun!</h3>
         </div>
         <div className="popcorn-gif">
-            <img src={popcorn} alt="popcorn-gif" />
+          <img src={popcorn} alt="popcorn-gif" />
         </div>
-        </div>
+      </div>
+      <main>
         <h3>TOP 20 - NOW PLAYING MOVIES:</h3>
         <MovieList movies={movies} />
+      </main>
     </div>
   );
 };
