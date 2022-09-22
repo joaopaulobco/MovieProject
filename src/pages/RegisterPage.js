@@ -2,23 +2,23 @@ import "./RegisterPage.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import usersApi from "../api/usersapi"
 
 const RegisterPage = () => {
     const [name, setName] = useState('');
     const [user, setUser] = useState('');
-    const [users, setUsers] = useState([]);
+    const [usersList, setUsersList] = useState([]);
 
     const navigate = useNavigate(); 
 
-    // useEffect(() => {
-    //   axios
-    //   .get('https://ironrest.herokuapp.com/movieprojectusers')
-    //   .then((response) => {
-    //     setUsers(response.data)
-    //   })
-    //   .catch((error) => window.alert('Error!'))
-    // }, []); 
-    
+    useEffect(() => {
+      usersApi.getUsersList()
+      .then((response) => {
+        setUsersList(response.data)
+      })
+      .catch((error) => window.alert('Error!'))
+    }, []); 
+
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -38,10 +38,9 @@ const RegisterPage = () => {
             })
             .catch((error) => window.alert('Error!'))
 
-        //const notRegister = users.find((user) => user.username === name)
-        // console.log("findUser",findUser)
-
-        // notRegister ? window.alert("User already registered. Try another username.") :  ;
+        const equalUser = usersList.find((eachuser) => eachuser.username === user)
+        
+        equalUser && window.alert("User already register. Try another username.")
     };
 
   return (

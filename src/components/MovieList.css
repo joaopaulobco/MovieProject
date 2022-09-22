@@ -3,7 +3,23 @@
     background: #8039C5;
     padding: 10px;
     width: 250px;
+    height: 40px;
     cursor: pointer;
     font-size: 1.1rem;
     color: white;
+    margin-left: 15px;
+    
+}
+
+.btn-remove {
+    border-radius: 15px;
+    background: #8039C5;
+    padding: 10px;
+    height: 40px;
+    width: 250px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: white;
+    margin-left: 15px;
+
 }

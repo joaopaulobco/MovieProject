@@ -1,20 +1,18 @@
 import './Login.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import axios from 'axios';
-import RegisterPage from './RegisterPage';
+import usersApi from '../api/usersapi';
 
 const Login = () => {
   const [username, setUsername] = useState("");
-  const [usersAPI, setUsersAPI] = useState([]); 
+  const [usersList, setUsersList] = useState([]); 
 
   const navigate = useNavigate(); 
 
   useEffect(() => {
-    axios
-    .get('https://ironrest.herokuapp.com/movieprojectusers')
+    usersApi.getUsersList()
     .then((response) => {
-      setUsersAPI(response.data)
+      setUsersList(response.data)
     })
     .catch((error) => window.alert('Error!'))
   }, []); 
@@ -22,7 +20,7 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const findUser = usersAPI.find((user) => user.username === username)
+    const findUser = usersList.find((user) => user.username === username)
 
     findUser ? navigate(`/userprofile/${findUser._id}`) : window.alert("User not found");   
   };
