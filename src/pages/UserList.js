@@ -13,7 +13,6 @@ const UserList = () => {
       .get(`https://ironrest.herokuapp.com/movieprojectusers/${userId}`)
       .then((response) => {
         setUserAPI(response.data);
-        console.log(userAPI)
       })
       .catch((error) => window.alert("Error!"));
     }
