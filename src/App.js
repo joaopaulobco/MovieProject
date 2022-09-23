@@ -1,6 +1,5 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import { useState, useEffect } from "react";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -11,17 +10,12 @@ import ErrorPage from "./pages/ErrorPage";
 import Login from "./pages/Login";
 import RegisterPage from "./pages/RegisterPage";
 import UserList from "./pages/UserList";
-import UserListContext from "./Utils/UserListContext";
 
 
 function App() {
-  const [userList, setUserList] = useState([]);
-  useEffect(() => {
-    console.log(userList)
-  },[userList])
+  
 
   return (
-    <UserListContext.Provider value={{userList, setUserList}}>
     
       <div className="App">
         <div className="app-navbar">
@@ -37,7 +31,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/userprofile" element={<UserProfile />} />
-              <Route path="/userprofile/:_id" element={<UserList />} />
+              <Route path="/userlist" element={<UserList />} />
               <Route path="/movie/:id" element={<Movie />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
@@ -47,7 +41,6 @@ function App() {
           <Footer />
         </div>
       </div>
-    </UserListContext.Provider>
   );
 }
 

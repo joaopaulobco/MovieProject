@@ -2,6 +2,7 @@ import './Login.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios';
+import { saveId } from '../Utils/Login.utils';
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -24,8 +25,14 @@ const Login = () => {
 
     const findUser = usersAPI.find((user) => user.username === username)
     console.log("findUser",findUser)
+    if(findUser){
+      saveId(findUser._id)
+      navigate(`/userlist`)
+    } else {
+      window.alert("User not found"); 
+    }
 
-    findUser ? navigate(`/userprofile/${findUser._id}`) : window.alert("User not found");   
+      
   };
   
   return (

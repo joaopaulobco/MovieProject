@@ -1,24 +1,52 @@
 import { Link } from "react-router-dom";
 import "./MovieList.css";
-import { useContext } from "react";
-import UserListContext from "../Utils/UserListContext";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { getId } from "../Utils/Login.utils";
 
 const MovieList = (props) => {
-  const { setUserList, userList } = useContext(UserListContext);
+  const [favoriteMovies, setFavoriteMovies] = useState([]);
+  const userId = getId();
+
+  useEffect(() => {
+    if (userId) {
+      axios
+        .get(`https://ironrest.herokuapp.com/movieprojectusers/${userId}`)
+        .then((response) => {
+          setFavoriteMovies(response.data.movies);
+        })
+        .catch((error) => window.alert("Error!"));
+    }
+  }, [userId]);
+
+  const isFavorite = (id) => {
+    const favoriteMovie = favoriteMovies.find((favorite)=> {
+      return favorite.id === id
+    })
+    return favoriteMovie ? true : false;
+  }
+
   const addMovie = (movie) => {
     let movieAlreadyExist = false;
-    for (let i = 0; i < userList.length; i++) {
-      if (movie.id === userList[i].id) {
+    for (let i = 0; i < favoriteMovies.length; i++) {
+      if (movie.id === favoriteMovies[i].id) {
         movieAlreadyExist = true;
         break;
       }
     }
 
-    if (!movieAlreadyExist) {
-      setUserList((e) => {
-        return [...e, movie];
-      });
-    }
+    if (movieAlreadyExist) return;
+
+    const moviesCopy = [...favoriteMovies, movie];
+
+    axios
+      .put(`https://ironrest.herokuapp.com/movieprojectusers/${userId}`, {
+        movies: moviesCopy,
+      })
+      .then((response) => {
+        setFavoriteMovies(moviesCopy);
+      })
+      .catch((error) => window.alert("Error!"));
   };
 
   return (
@@ -34,9 +62,12 @@ const MovieList = (props) => {
                 />
                 <h4>{movie.title}</h4>
               </Link>
-              <button className="btn-add" onClick={() => addMovie(movie)}>
+              {!isFavorite(movie.id) && (
+                <button className="btn-add" onClick={() => addMovie(movie)}>
                 Add
               </button>
+              ) }
+              
             </div>
           );
         })}
