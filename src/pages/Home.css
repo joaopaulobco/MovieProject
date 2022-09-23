@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0;
-    
+    width: 100%;
 }
 
 .nowplaying-movies {
@@ -14,15 +14,11 @@
     flex-direction: column;
     padding: 10px;
     justify-content: space-between;
-    
-    
 }
 
 .nowplaying-movies img {
     width: 280px;
 }
-
-
 
 .home a {
     color: white;
@@ -69,19 +65,29 @@
     font-size: 1.5rem;
     color: white;
     font-weight: 600;
-    margin: 20px;
+    margin: 0 20px 0 20px;
     background-color: #111;
     padding: 10px 15px;
+}
+
+.smile {
+    height: 28px;
+    margin-left: 8px;
+}
+
+.main {
+    width: 100%;
+    margin: 0;
 }
 
 @media (min-width: 350px) and (max-width: 990px) {
     .popcorn-gif, 
     .cine,
-    .home-title h3 {
+    .home-title h3, h4, p {
         display: none;
     }
 
-    .home-title h1 {
+    .home-title h2 {
         font-size: 1.6rem;
         text-align: center;
     }
