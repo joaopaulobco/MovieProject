@@ -55,7 +55,7 @@ const MovieList = (props) => {
         {props.movies.map((movie) => {
           return (
             <div className="nowplaying-movies" key={movie.id}>
-              <Link to={`/movie/${movie.id}`} key={movie.id}>
+              <Link to={`/movie/${movie.id}`}>
                 <img
                   src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`}
                   alt="poster"
