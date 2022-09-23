@@ -1,6 +1,7 @@
 import './Login.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { saveId } from '../Utils/Login.utils';
 import usersApi from '../api/usersapi';
 
 const Login = () => {
@@ -21,8 +22,14 @@ const Login = () => {
     event.preventDefault();
 
     const findUser = usersList.find((user) => user.username === username)
+    if(findUser){
+      saveId(findUser._id)
+      navigate(`/userlist`)
+    } else {
+      window.alert("User not found"); 
+    }
 
-    findUser ? navigate(`/userprofile/${findUser._id}`) : window.alert("User not found");   
+      
   };
   
   return (
