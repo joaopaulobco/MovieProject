@@ -1,5 +1,4 @@
 import "./UserProfile.css";
-import smile from "../images/smile.png"
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Pagination from "../components/Pagination";
