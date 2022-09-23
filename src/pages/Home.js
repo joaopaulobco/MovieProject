@@ -35,8 +35,8 @@ const Home = () => {
           <img src={popcorn} alt="popcorn-gif" />
         </div>
       </div>
+        <h3 className="top20">TOP 20 - NOW PLAYING MOVIES:</h3>
       <main>
-        <h3>TOP 20 - NOW PLAYING MOVIES:</h3>
         <MovieList movies={movies} />
       </main>
     </div>
