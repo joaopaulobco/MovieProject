@@ -37,3 +37,10 @@
     margin-bottom: 20px;
     margin-top: 10px;
 }
+
+@media (min-width: 350px) and (max-width: 990px) {
+    .register-area {
+        margin: 0;
+        border: none;
+    }
+}

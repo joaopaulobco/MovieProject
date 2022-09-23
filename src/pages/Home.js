@@ -1,5 +1,6 @@
 import "./Home.css";
 import popcorn from "../images/popcorn.gif";
+import smile from "../images/smile.png"
 import cinema from "../images/cinema.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -24,19 +25,21 @@ const Home = () => {
       <div className="home-introduction">
         <img className="cine" src={cinema} alt="cine" />
         <div className="home-title">
-          <h1>WELCOME TO YOUR MOVIE'S LIBRARY!</h1>
-          <h3>
+          <h2>WELCOME TO YOUR MOVIE'S LIBRARY!</h2>
+          <h4>
             Here you will find the release movies, what are now playing on the
             cinema and much more!
-          </h3>
-          <h3>Have fun!</h3>
+          </h4>
+          <p>Do you wanna have your own favorites movies list?</p>
+        <p>So, it's easy! Choose the movies below and click on the button to add or remove them to your list!</p>
+          <h3>Have fun! <img className='smile' src={smile} alt="smile-icon" /></h3>
         </div>
         <div className="popcorn-gif">
           <img src={popcorn} alt="popcorn-gif" />
         </div>
       </div>
+        <h3 className="top20">TOP 20 - NOW PLAYING MOVIES:</h3>
       <main>
-        <h3>TOP 20 - NOW PLAYING MOVIES:</h3>
         <MovieList movies={movies} />
       </main>
     </div>
