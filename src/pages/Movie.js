@@ -44,17 +44,17 @@ const Movie = () => {
                 return <span key={genre.id}>{genre.name}</span>;
               })}
             </div>
-            <p>
+            <p className="estrela-img">
               <img src={estrela} alt="estrela" />
               {movie.vote_average}
             </p>
-            <p>
+            <p className="release-date">
               <b>Release Date:</b> {movie.release_date}
             </p>
-            <p>
+            <p className="sinopse">
               <b>Sinopse:</b> {movie.overview}
             </p>
-            <p>
+            <p className="runtime">
               <b>Runtime:</b> {movie.runtime} minutes.
             </p>
             
